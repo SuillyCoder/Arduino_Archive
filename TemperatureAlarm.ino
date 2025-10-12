@@ -1,0 +1,71 @@
+#include <SimpleDHT.h>
+
+// for DHT11, 
+//      VCC: 5V or 3V
+//      GND: GND
+//      DATA: 2
+int pinDHT11 = 2;
+SimpleDHT11 dht11;
+
+int ledBlue = 8;
+int ledYellow = 9;
+int ledRed = 10;
+int buzzer = 12;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledBlue, OUTPUT);
+  pinMode(ledYellow, OUTPUT);
+  pinMode(ledRed, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  // start working...
+  Serial.println("=================================");
+  Serial.println("Sample DHT11...");
+  
+  // read with raw sample data.
+  byte temperature = 0;
+  byte humidity = 0;
+  byte data[40] = {0};
+  if (dht11.read(pinDHT11, &temperature, &humidity, data)) {
+    Serial.print("Read DHT11 failed");
+    return;
+  }
+  
+  Serial.print("Sample RAW Bits: ");
+  for (int i = 0; i < 40; i++) {
+    Serial.print((int)data[i]);
+    if (i > 0 && ((i + 1) % 4) == 0) {
+      Serial.print(' ');
+    }
+  }
+  Serial.println("");
+  
+  Serial.print("Sample OK: ");
+  Serial.print((int)temperature); Serial.print(" *C, ");
+  Serial.print((int)humidity); Serial.println(" %");
+
+  if (temperature <= 25){
+    digitalWrite(ledBlue, HIGH);
+    digitalWrite(ledYellow, LOW);
+    digitalWrite(ledRed, LOW);
+    noTone(buzzer);
+  }
+  else if(temperature >= 26 && temperature <= 30){
+    digitalWrite(ledBlue, LOW);
+    digitalWrite(ledYellow, HIGH);
+    digitalWrite(ledRed, LOW);
+    noTone(buzzer);
+  }
+  else{
+    digitalWrite(ledBlue, LOW);
+    digitalWrite(ledYellow, LOW);
+    digitalWrite(ledRed, HIGH);
+    tone(buzzer, 1000, 500); 
+  }
+  
+  // DHT11 sampling rate is 1HZ.
+  delay(1000);
+}
