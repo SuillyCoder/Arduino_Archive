@@ -17,19 +17,22 @@ Regardless, that's not going to stop me from trying to get a hands-on experience
 <img width="1067" height="673" alt="Screenshot 2026-01-12 at 9 34 08 PM" src="https://github.com/user-attachments/assets/6362e887-ce83-4c1b-8a1b-6f1b635033e0" />
 <p>Insert description</p>
 
-## Exercise X: Name
+## Exercise 4: Distance Reader
 <img width="1225" height="827" alt="Screenshot 2026-01-12 at 9 35 00 PM" src="https://github.com/user-attachments/assets/8334436f-8073-44c8-84b3-56d90375f364" />
 <p>Insert description</p>
 
-## Exercise X: Name
+## Exercise 5: Mini-Rapiscan
+<img width="645" height="397" alt="image" src="https://github.com/user-attachments/assets/dcc5783f-f933-4f6d-8428-69b176a4f37a" />
+<p>Insert description</p>
+
+## Exercise 6: Volume Visualizer
 <img width="1346" height="817" alt="Screenshot 2026-01-12 at 9 48 48 PM" src="https://github.com/user-attachments/assets/f296b1ea-41fc-4c17-b3d8-0f22a4ff8e55" />
-
 <p>Insert description</p>
+
+## Exercise 7: Digi-Math Quiz
 <img width="723" height="646" alt="Screenshot 2026-01-12 at 9 49 05 PM" src="https://github.com/user-attachments/assets/b25cde55-5668-4d0e-88c4-9c97b7078317" />
-
-## Exercise X: Name
-<img width="1174" height="750" alt="Screenshot 2026-01-12 at 9 49 28 PM" src="https://github.com/user-attachments/assets/6a3307a5-d3c0-4aaf-823b-c07340ebe153" />
 <p>Insert description</p>
 
-
+## Exercise 8: Motor Control
+<img width="1174" height="750" alt="Screenshot 2026-01-12 at 9 49 28 PM" src="https://github.com/user-attachments/assets/6a3307a5-d3c0-4aaf-823b-c07340ebe153" />
 <p>Insert description</p>
